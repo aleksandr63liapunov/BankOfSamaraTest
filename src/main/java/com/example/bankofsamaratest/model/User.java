@@ -46,6 +46,7 @@ public class User {
     private Set<PhoneNumber> phones = new HashSet<>();
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    @JsonManagedReference
     private BankAccount account;
 
 
